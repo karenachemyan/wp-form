@@ -24,6 +24,7 @@ function w_form_shortcode()
 {
     ob_start();
 ?>
+<form>
     <div class="container" id="step1">
         <div class="row justify-content-center">
             <div class="col-md-8 bg-primary pt-3 pb-3">
@@ -50,7 +51,7 @@ function w_form_shortcode()
                     </div>
                 </div>
 
-                <form>
+               
                     <p id="full-error" class="text-danger"></p>
                     <input type="text" name="fullName" placeholder="Full Name" id="full">
 
@@ -98,7 +99,7 @@ function w_form_shortcode()
                 </div>
             </div>
 
-            <form class="row mt-4">
+            <div class="row mt-4">
                 <div class="col-md-4">
                     <label for="usdot_st2" class="form-label">Your USDOT#*</label>
                     <input type="text" name="usdot" placeholder="USDOT #" id="usdot_st2" maxlength='14' class="border">
@@ -222,7 +223,7 @@ function w_form_shortcode()
             </div>          
 
     </div>
-
+    </div>
     </div>
 <!-- 3rd step  -->
 
@@ -378,7 +379,7 @@ function w_form_shortcode()
                 </div>
 </div>
 
-  
+</form>
 
 <?php
     return ob_get_clean();
