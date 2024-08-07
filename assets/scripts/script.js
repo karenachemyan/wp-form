@@ -459,7 +459,7 @@ function validateCVC() {
     const input = document.getElementById('cvc');
     const value = input.value;
 
-    // Remove non-digit characters
+   
     input.value = value.replace(/\D/g, '');
 
     if (input.value.length > 4) {
@@ -474,7 +474,7 @@ function validateCardNumber() {
     const input = document.getElementById('card');
     const value = input.value;
 
-    // Remove non-digit characters
+    
     input.value = value.replace(/\D/g, '');
 
     if (input.value.length > 16) {
