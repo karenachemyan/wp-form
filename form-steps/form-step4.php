@@ -36,6 +36,7 @@
                 <div class="col-md-6">
                     <label for="exp" class="form-label">Expiration Date*</label>
                     <input type="text" name="exp" id="exp" class="border" placeholder="MM/YY">
+                    <span class="text-danger d-none" id="invalid_exp">Invalid Exp Date</span>
                 </div>
                 <div class="col-md-6">
                     <label for="holder" class="form-label">Card Holder*</label>
@@ -209,5 +210,7 @@
             
         </div>
     </div>
+
+    <input type="hidden" value="<?php echo get_site_url(); ?>">
 
 </div>

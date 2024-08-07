@@ -48,13 +48,13 @@
 
                 <div class="col-md-4">
                     <label for="phone_business" class="form-label">Business Phone*</label>
-                    <input type="text" name="email" placeholder="Business Phone" id="phone_business" class="border">
+                    <input type="text" name="phone_business" placeholder="Business Phone" id="phone_business" class="border">
                 </div>
 
                 <div class="col-md-4 mt-4">
                 <input type="checkbox" class="form-check-input" id="is_business">
-                <label class="form-check-label" for="exampleCheck1">Same as Business Phone*</label>
-                <input type="text" name="phone_buss" placeholder="Enter Your Phone Number" id="phone_buss" class="border">
+                <label class="form-check-label" for="is_business">Same as Business Phone*</label>
+                <input type="text" name="phone_buss_same" placeholder="Enter Your Phone Number" id="phone_buss" class="border">
                 </div>
 
             <button class="bg-primary mt-4 text-white w-50 m-auto" onclick="getCompanyInfo(event)" type="submit">Get Company Info</button>

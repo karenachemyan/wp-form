@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (value.length >= 2) {
             value = `${value.slice(0, 2)}/${value.slice(2)}`;
-        }
+        }       
 
         event.target.value = value;
     });
@@ -507,7 +507,7 @@ function submitPayment(event){
 
     let isValid = true;
 
-    if(!card){
+    if(!card || card.length < 16){
         document.getElementById('card').classList.add('border-danger');
         isValid = false;
     }
@@ -571,7 +571,12 @@ function submitPayment(event){
         document.getElementById('bill_zip').classList.remove('border-danger')
     }
 
-    if(initial1 !== initial2 || initial3 !== initial4 || initial2 !== initial3){        
+    if(!initial1 && !initial2 && !initial3 && !initial4){        
+        document.getElementById('initials-msg').classList.remove('d-none');
+        isValid = false;
+    }
+
+    else if(initial1 !== initial2 || initial3 !== initial4 || initial2 !== initial3){        
         document.getElementById('initials-msg').classList.remove('d-none');
         isValid = false;
     }
@@ -588,16 +593,19 @@ function submitPayment(event){
         document.querySelector(`label[for='by_cont']`).classList.remove('text-danger');
     }
 
+    if(exp.slice(0,2) > 12){
+        document.getElementById('invalid_exp').classList.remove('d-none');
+        isValid = false;
+    }
+    else{
+        document.getElementById('invalid_exp').classList.add('d-none')
+    }
+
     if(isValid){
-        alert("SuccessFully Regostered")
+        alert("SuccessFully Registered")
     }
     else{
         event.preventDefault();
     }
-
-
-
-
 }
-
 /* Submit Form btn */

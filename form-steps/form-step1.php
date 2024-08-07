@@ -25,16 +25,16 @@
                 </div>
 
                
-                    <p id="full-error" class="text-danger"></p>
+                    <span id="full-error" class="text-danger"></span>
                     <input type="text" name="fullName" placeholder="Full Name" id="full">
 
-                    <p id="email-error" class="text-danger"></p>
+                    <span id="email-error" class="text-danger"></span>
                     <input type="email" name="email" placeholder="Email" id="email">
 
-                    <p id="phone-error" class="text-danger"></p>
+                    <span id="phone-error" class="text-danger"></span>
                     <input type="text" name="phone" placeholder="Phone Number" id="phone">
 
-                    <p id="usdot-error" class="text-danger"></p>
+                    <span id="usdot-error" class="text-danger"></span>
                     <input type="text" name="usdot" placeholder="USDOT #" id="usdot" maxlength='14'>
 
                     <input type="button" id="next" value="Next Step" onclick="validateForm()" class="mt-4">
